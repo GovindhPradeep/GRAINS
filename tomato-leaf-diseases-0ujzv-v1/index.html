@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Disease Detection</title>
+
+    <meta name="viewport" content="width=640, user-scalable=no" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
+        integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/async/3.2.0/async.min.js"
+        integrity="sha512-6K6+H87tLdCWvY5ml9ZQXLRlPlDEt8uXmtELhuJRgFyEDv6JvndWHg3jadJuBVGPEhhA2AAt+ROMC2V7EvTIWw=="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/inferencejs"></script>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body class="loading">
+    <h1>Plant Disease Detection</h1>
+    <form id="uploadForm">
+        <input type="file" id="fileInput" accept="image/*" required>
+        <button type="submit">Upload and Predict</button>
+    </form>
+    <div id="predictions"></div>
+    <video id="video" autoplay muted playsinline></video>
+    <div id="fps"></div>
+
+    <!-- Camera Button -->
+    <button id="camera-btn" class="btn btn-outline-success">Open Camera</button>
+
+    <!-- Camera Feed Container -->
+    <div id="camera-container" style="display: none; margin-top: 20px;">
+        <video id="camera-feed" width="320" height="240" autoplay></video>
+        <button id="capture-btn" class="btn btn-outline-primary">Capture Photo</button>
+    </div>
+
+    <!-- Captured Image Preview -->
+    <img id="preview" src="#" alt="Captured Image Preview" style="display: none; max-width: 100%; margin-top: 20px;" />
+</body>
+</html>
